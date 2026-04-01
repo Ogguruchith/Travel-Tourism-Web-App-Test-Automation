@@ -23,7 +23,7 @@ public class destinationteser extends baseTest {
     }
 
 	@Test
-	public void verifyDestinationNavigation() {
+	public void verifyDestinationNavigation() throws Exception {
 		
 
 	    String expectedUrl = "http://127.0.0.1:5501/destinations.html";
@@ -37,6 +37,13 @@ public class destinationteser extends baseTest {
 	    dest.enterUsername("John Wick");
 	    dest.enterComment("Nice place to visit");
 	    dest.clickSubmit();
+	    
+	    for(int i=0;i<=1;i++)
+	    {
+	    	driver.navigate().back();
+	    	Thread.sleep(3000);
+	    }
+	    
 	}
 	
 }
